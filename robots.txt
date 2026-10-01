@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://philipid3s.github.io/portfolio.github.io/sitemap.xml
+Sitemap: https://philipid3s.github.io/sitemap.xml
