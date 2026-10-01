@@ -74,10 +74,10 @@
               "position": 3,
               "item": {
                 "@type": "SoftwareApplication",
-                "name": "CHIP-8 Emulator",
-                "applicationCategory": "GameApplication",
-                "url": "https://philipid3s.github.io/chip8-wasm/",
-                "codeRepository": "https://github.com/Philipid3s/chip8-wasm"
+                "name": "BNB Arbitrage Monitor",
+                "applicationCategory": "FinanceApplication",
+                "url": "http://72.62.254.69:4000/",
+                "codeRepository": "https://github.com/Philipid3s/bnb-arb-monitor"
               }
             },
             {
@@ -118,28 +118,6 @@
               "position": 7,
               "item": {
                 "@type": "SoftwareApplication",
-                "name": "Design Chooser",
-                "applicationCategory": "DesignApplication",
-                "url": "https://philipid3s.github.io/design-chooser/",
-                "codeRepository": "https://github.com/Philipid3s/design-chooser"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 8,
-              "item": {
-                "@type": "SoftwareApplication",
-                "name": "BNB Arbitrage Monitor",
-                "applicationCategory": "FinanceApplication",
-                "url": "http://72.62.254.69:4000/",
-                "codeRepository": "https://github.com/Philipid3s/bnb-arb-monitor"
-              }
-            },
-            {
-              "@type": "ListItem",
-              "position": 9,
-              "item": {
-                "@type": "SoftwareApplication",
                 "name": "Emergency Dashboard",
                 "applicationCategory": "ReferenceApplication",
                 "url": "http://72.62.254.69:5000/",
@@ -148,7 +126,18 @@
             },
             {
               "@type": "ListItem",
-              "position": 10,
+              "position": 8,
+              "item": {
+                "@type": "WebApplication",
+                "name": "Ad Astra",
+                "applicationCategory": "NewsApplication",
+                "url": "https://philipid3s.github.io/ad-astra/",
+                "codeRepository": "https://github.com/Philipid3s/ad-astra"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 9,
               "item": {
                 "@type": "WebApplication",
                 "name": "Dev Stack Reference",
@@ -159,7 +148,7 @@
             },
             {
               "@type": "ListItem",
-              "position": 11,
+              "position": 10,
               "item": {
                 "@type": "WebApplication",
                 "name": "Dev Cmds",
@@ -170,13 +159,24 @@
             },
             {
               "@type": "ListItem",
+              "position": 11,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Design Chooser",
+                "applicationCategory": "DesignApplication",
+                "url": "https://philipid3s.github.io/design-chooser/",
+                "codeRepository": "https://github.com/Philipid3s/design-chooser"
+              }
+            },
+            {
+              "@type": "ListItem",
               "position": 12,
               "item": {
-                "@type": "WebApplication",
-                "name": "Musée Imaginaire",
-                "applicationCategory": "ReferenceApplication",
-                "url": "https://philipid3s.github.io/musee-imaginaire/",
-                "codeRepository": "https://github.com/Philipid3s/musee-imaginaire"
+                "@type": "SoftwareApplication",
+                "name": "CHIP-8 Emulator",
+                "applicationCategory": "GameApplication",
+                "url": "https://philipid3s.github.io/chip8-wasm/",
+                "codeRepository": "https://github.com/Philipid3s/chip8-wasm"
               }
             },
             {
@@ -184,10 +184,10 @@
               "position": 13,
               "item": {
                 "@type": "WebApplication",
-                "name": "Ad Astra",
-                "applicationCategory": "NewsApplication",
-                "url": "https://philipid3s.github.io/ad-astra/",
-                "codeRepository": "https://github.com/Philipid3s/ad-astra"
+                "name": "Musée Imaginaire",
+                "applicationCategory": "ReferenceApplication",
+                "url": "https://philipid3s.github.io/musee-imaginaire/",
+                "codeRepository": "https://github.com/Philipid3s/musee-imaginaire"
               }
             }
           ]
@@ -230,7 +230,7 @@
     }
 
     .hero {
-      margin-bottom: 24px;
+      margin-bottom: 36px;
       text-align: center;
     }
 
@@ -246,9 +246,32 @@
       font-size: clamp(1rem, 2vw, 1.15rem);
     }
 
+    .group + .group {
+      margin-top: 34px;
+    }
+
+    .group-title {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin: 0 0 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .group-title::after {
+      content: "";
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, rgba(79, 209, 197, 0.45), transparent);
+    }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 18px;
     }
 
@@ -271,7 +294,7 @@
       border-color: rgba(79, 209, 197, 0.55);
     }
 
-    .card h2 {
+    .card h3 {
       margin: 0;
       font-size: 1.25rem;
     }
@@ -280,21 +303,23 @@
       color: var(--muted);
       font-size: 0.95rem;
       line-height: 1.45;
+      margin: 0;
       flex: 1;
     }
 
     .actions {
       display: flex;
       gap: 10px;
-      flex-wrap: wrap;
     }
 
     .btn {
       text-decoration: none;
       font-weight: 600;
       font-size: 0.92rem;
-      padding: 10px 14px;
+      padding: 10px;
       border-radius: 11px;
+      flex: 1;
+      white-space: nowrap;
       transition: transform 150ms ease, filter 150ms ease;
       border: 1px solid transparent;
       display: inline-flex;
@@ -367,14 +392,6 @@
       .card {
         padding: 16px;
       }
-
-      .actions {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -401,123 +418,132 @@
       <p>Quick access to my proof-of-concepts and experimental builds.</p>
     </section>
 
-    <section class="grid" aria-label="Project links">
-      <article class="card">
-        <h2>Kargo CTRM</h2>
-        <p class="meta">Lightweight web-based CTRM for physical Iron Ore trading — deal capture, QP pricing formulas, mark-to-market and FIFO exposure matching.</p>
-        <div class="actions">
-          <a class="btn live" href="http://72.62.254.69:8010/dashboard" target="_blank" rel="noopener noreferrer" aria-label="Open Kargo CTRM demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/kargo" target="_blank" rel="noopener noreferrer" aria-label="View Kargo CTRM on GitHub">View GitHub</a>
-        </div>
-      </article>
+    <section class="group" aria-labelledby="group-trading">
+      <h2 class="group-title" id="group-trading">Trading &amp; Blockchain</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Kargo CTRM</h3>
+          <p class="meta">Lightweight web-based CTRM for physical Iron Ore trading — deal capture, QP pricing formulas, mark-to-market and FIFO exposure matching.</p>
+          <div class="actions">
+            <a class="btn live" href="http://72.62.254.69:8010/dashboard" target="_blank" rel="noopener noreferrer" aria-label="Open Kargo CTRM demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/kargo" target="_blank" rel="noopener noreferrer" aria-label="View Kargo CTRM on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Gold Bars Exchange</h3>
+          <p class="meta">Blockchain marketplace for physical gold bar trading with MetaMask wallet integration on the Polygon testnet.</p>
+          <div class="actions">
+            <a class="btn live" href="http://72.62.254.69:3000/" target="_blank" rel="noopener noreferrer" aria-label="Open Gold Bars Exchange demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/gold-bars-exchange" target="_blank" rel="noopener noreferrer" aria-label="View Gold Bars Exchange on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>BNB Arbitrage Monitor</h3>
+          <p class="meta">BNB Chain arbitrage monitor — Node.js API and dashboard comparing CoinGecko reference prices with OpenOcean swap quotes to flag spread opportunities.</p>
+          <div class="actions">
+            <a class="btn live" href="http://72.62.254.69:4000/" target="_blank" rel="noopener noreferrer" aria-label="Open BNB Arbitrage Monitor demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/bnb-arb-monitor" target="_blank" rel="noopener noreferrer" aria-label="View BNB Arbitrage Monitor on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>PyBlockchain</h3>
+          <p class="meta">Minimal blockchain PoC in Python — decentralized content sharing powered by SHA-256 and Proof of Work.</p>
+          <div class="actions">
+            <a class="btn live" href="http://72.62.254.69:8030/" target="_blank" rel="noopener noreferrer" aria-label="Open PyBlockchain demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/py-blockchain" target="_blank" rel="noopener noreferrer" aria-label="View PyBlockchain on GitHub">View GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="card">
-        <h2>Gold Bars Exchange</h2>
-        <p class="meta">Blockchain marketplace for physical gold bar trading with MetaMask wallet integration on the Polygon testnet.</p>
-        <div class="actions">
-          <a class="btn live" href="http://72.62.254.69:3000/" target="_blank" rel="noopener noreferrer" aria-label="Open Gold Bars Exchange demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/gold-bars-exchange" target="_blank" rel="noopener noreferrer" aria-label="View Gold Bars Exchange on GitHub">View GitHub</a>
-        </div>
-      </article>
+    <section class="group" aria-labelledby="group-data">
+      <h2 class="group-title" id="group-data">Live Data &amp; Intelligence</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>The Frontier</h3>
+          <p class="meta">Live tracker of the frontier model landscape — latest and upcoming AI releases from OpenAI, Anthropic, Google, xAI, DeepSeek and more.</p>
+          <div class="actions">
+            <a class="btn live" href="http://72.62.254.69:3010/" target="_blank" rel="noopener noreferrer" aria-label="Open The Frontier demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/the-frontier" target="_blank" rel="noopener noreferrer" aria-label="View The Frontier on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>ScamIntel</h3>
+          <p class="meta">Fraud investigation platform for analyzing suspicious URLs, domains, IPs, wallets, and DNS/HTTP/TLS/RDAP evidence, with IOC extraction and scan exports.</p>
+          <div class="actions">
+            <a class="btn live" href="http://72.62.254.69:3020/" target="_blank" rel="noopener noreferrer" aria-label="Open ScamIntel demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/scam-intel" target="_blank" rel="noopener noreferrer" aria-label="View ScamIntel on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Emergency Dashboard</h3>
+          <p class="meta">Live global emergencies map — earthquakes, weather alerts, natural hazards, FEMA declarations and CDC signals from USGS, NOAA and NASA feeds.</p>
+          <div class="actions">
+            <a class="btn live" href="http://72.62.254.69:5000/" target="_blank" rel="noopener noreferrer" aria-label="Open Emergency Dashboard demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/emergencies-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Emergency Dashboard on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Ad Astra</h3>
+          <p class="meta">Rocket launch tracker and spaceflight news feed with a live countdown, launch streams, calendar export, and data refreshed every 10 minutes via GitHub Actions.</p>
+          <div class="actions">
+            <a class="btn live" href="https://philipid3s.github.io/ad-astra/" target="_blank" rel="noopener noreferrer" aria-label="Open Ad Astra page">Open Page</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/ad-astra" target="_blank" rel="noopener noreferrer" aria-label="View Ad Astra on GitHub">View GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="card">
-        <h2>CHIP-8 Emulator</h2>
-        <p class="meta">CHIP-8 emulator written in C, compiled to WebAssembly via Emscripten. Runs in the browser using SDL2 on an HTML5 canvas. Includes Pong.</p>
-        <div class="actions">
-          <a class="btn live" href="https://philipid3s.github.io/chip8-wasm/" target="_blank" rel="noopener noreferrer" aria-label="Open CHIP-8 Emulator demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/chip8-wasm" target="_blank" rel="noopener noreferrer" aria-label="View CHIP-8 Emulator on GitHub">View GitHub</a>
-        </div>
-      </article>
+    <section class="group" aria-labelledby="group-devtools">
+      <h2 class="group-title" id="group-devtools">Developer Tools</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>Dev Stack Reference</h3>
+          <p class="meta">Curated linkboard of the modern developer stack — frontend, backend, AI coding assistants, free AI APIs, databases and hosting, with live search and click-to-copy commands.</p>
+          <div class="actions">
+            <a class="btn live" href="https://philipid3s.github.io/dev-stack/" target="_blank" rel="noopener noreferrer" aria-label="Open Dev Stack Reference page">Open Page</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/dev-stack" target="_blank" rel="noopener noreferrer" aria-label="View Dev Stack Reference on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Dev Cmds</h3>
+          <p class="meta">Command and AI-prompt library for full-stack developers — fill in placeholders once and copy ready-to-run Git, Docker and npm commands.</p>
+          <div class="actions">
+            <a class="btn live" href="https://philipid3s.github.io/copy-command/" target="_blank" rel="noopener noreferrer" aria-label="Open Dev Cmds page">Open Page</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/copy-command" target="_blank" rel="noopener noreferrer" aria-label="View Dev Cmds on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Design Chooser</h3>
+          <p class="meta">Interactive design system builder — pick themes, button styles, inputs and cards, preview everything live, then export as JSON tokens, CSS variables or Tailwind config.</p>
+          <div class="actions">
+            <a class="btn live" href="https://philipid3s.github.io/design-chooser/" target="_blank" rel="noopener noreferrer" aria-label="Open Design Chooser demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/design-chooser" target="_blank" rel="noopener noreferrer" aria-label="View Design Chooser on GitHub">View GitHub</a>
+          </div>
+        </article>
+      </div>
+    </section>
 
-      <article class="card">
-        <h2>PyBlockchain</h2>
-        <p class="meta">Minimal blockchain PoC in Python — decentralized content sharing powered by SHA-256 and Proof of Work.</p>
-        <div class="actions">
-          <a class="btn live" href="http://72.62.254.69:8030/" target="_blank" rel="noopener noreferrer" aria-label="Open PyBlockchain demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/py-blockchain" target="_blank" rel="noopener noreferrer" aria-label="View PyBlockchain on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>The Frontier</h2>
-        <p class="meta">Live tracker of the frontier model landscape — latest and upcoming AI releases from OpenAI, Anthropic, Google, xAI, DeepSeek and more.</p>
-        <div class="actions">
-          <a class="btn live" href="http://72.62.254.69:3010/" target="_blank" rel="noopener noreferrer" aria-label="Open The Frontier demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/the-frontier" target="_blank" rel="noopener noreferrer" aria-label="View The Frontier on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>ScamIntel</h2>
-        <p class="meta">Fraud investigation platform for analyzing suspicious URLs, domains, IPs, wallets, and DNS/HTTP/TLS/RDAP evidence, with IOC extraction and scan exports.</p>
-        <div class="actions">
-          <a class="btn live" href="http://72.62.254.69:3020/" target="_blank" rel="noopener noreferrer" aria-label="Open ScamIntel demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/scam-intel" target="_blank" rel="noopener noreferrer" aria-label="View ScamIntel on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Design Chooser</h2>
-        <p class="meta">Interactive design system builder - pick themes, button styles, inputs, and cards, preview everything live, then export as JSON tokens, CSS variables, or Tailwind config.</p>
-        <div class="actions">
-          <a class="btn live" href="https://philipid3s.github.io/design-chooser/" target="_blank" rel="noopener noreferrer" aria-label="Open Design Chooser demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/design-chooser" target="_blank" rel="noopener noreferrer" aria-label="View Design Chooser on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>BNB Arbitrage Monitor</h2>
-        <p class="meta">BNB Chain arbitrage monitor API + dashboard comparing CoinGecko reference prices with OpenOcean quote.</p>
-        <div class="actions">
-          <a class="btn live" href="http://72.62.254.69:4000/" target="_blank" rel="noopener noreferrer" aria-label="Open BNB Arbitrage Monitor demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/bnb-arb-monitor" target="_blank" rel="noopener noreferrer" aria-label="View BNB Arbitrage Monitor on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Emergency Dashboard</h2>
-        <p class="meta">Real-time emergencies dashboard with map layers for earthquakes, weather alerts, natural hazards...</p>
-        <div class="actions">
-          <a class="btn live" href="http://72.62.254.69:5000/" target="_blank" rel="noopener noreferrer" aria-label="Open Emergency Dashboard demo">Open Demo</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/emergencies-dashboard" target="_blank" rel="noopener noreferrer" aria-label="View Emergency Dashboard on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Dev Stack Reference</h2>
-        <p class="meta">Comprehensive reference for developer tools and technologies.</p>
-        <div class="actions">
-          <a class="btn live" href="https://philipid3s.github.io/dev-stack/" target="_blank" rel="noopener noreferrer" aria-label="Open Dev Stack Reference page">Open Page</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/dev-stack" target="_blank" rel="noopener noreferrer" aria-label="View Dev Stack Reference on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Dev Cmds</h2>
-        <p class="meta">A high-performance, interactive toolkit for modern full-stack and AI-oriented developers.</p>
-        <div class="actions">
-          <a class="btn live" href="https://philipid3s.github.io/copy-command/" target="_blank" rel="noopener noreferrer" aria-label="Open Dev Cmds page">Open Page</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/copy-command" target="_blank" rel="noopener noreferrer" aria-label="View Dev Cmds on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Musée Imaginaire</h2>
-        <p class="meta">My personal musée imaginaire — a curated gallery of the artists who impacted me, across painting, music, film, and literature.</p>
-        <div class="actions">
-          <a class="btn live" href="https://philipid3s.github.io/musee-imaginaire/" target="_blank" rel="noopener noreferrer" aria-label="Open Musée Imaginaire page">Open Page</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/musee-imaginaire" target="_blank" rel="noopener noreferrer" aria-label="View Musée Imaginaire on GitHub">View GitHub</a>
-        </div>
-      </article>
-
-      <article class="card">
-        <h2>Ad Astra</h2>
-        <p class="meta">Rocket launch tracker and spaceflight news feed with a live countdown, launch streams, calendar export, and data refreshed every 10 minutes via GitHub Actions.</p>
-        <div class="actions">
-          <a class="btn live" href="https://philipid3s.github.io/ad-astra/" target="_blank" rel="noopener noreferrer" aria-label="Open Ad Astra page">Open Page</a>
-          <a class="btn repo" href="https://github.com/Philipid3s/ad-astra" target="_blank" rel="noopener noreferrer" aria-label="View Ad Astra on GitHub">View GitHub</a>
-        </div>
-      </article>
+    <section class="group" aria-labelledby="group-creative">
+      <h2 class="group-title" id="group-creative">Creative &amp; Experiments</h2>
+      <div class="grid">
+        <article class="card">
+          <h3>CHIP-8 Emulator</h3>
+          <p class="meta">CHIP-8 emulator written in C, compiled to WebAssembly via Emscripten. Runs in the browser using SDL2 on an HTML5 canvas. Includes Pong.</p>
+          <div class="actions">
+            <a class="btn live" href="https://philipid3s.github.io/chip8-wasm/" target="_blank" rel="noopener noreferrer" aria-label="Open CHIP-8 Emulator demo">Open Demo</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/chip8-wasm" target="_blank" rel="noopener noreferrer" aria-label="View CHIP-8 Emulator on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Musée Imaginaire</h3>
+          <p class="meta">My personal musée imaginaire — a curated gallery of the artists who impacted me, across painting, music, film, and literature.</p>
+          <div class="actions">
+            <a class="btn live" href="https://philipid3s.github.io/musee-imaginaire/" target="_blank" rel="noopener noreferrer" aria-label="Open Musée Imaginaire page">Open Page</a>
+            <a class="btn repo" href="https://github.com/Philipid3s/musee-imaginaire" target="_blank" rel="noopener noreferrer" aria-label="View Musée Imaginaire on GitHub">View GitHub</a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <footer>
