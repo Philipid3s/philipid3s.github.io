@@ -6,6 +6,7 @@ Single-file static launchpad for proof-of-concept and prototype projects.
 
 - `index.html` contains the page markup, styles, project cards, and footer links.
 - `robots.txt` and `sitemap.xml` provide basic crawler hints for search engines.
+- `favicon.svg` and `apple-touch-icon.png` are the site icons; `og-image.png` (1200×630) is the social share preview.
 - `.nojekyll` keeps GitHub Pages in plain static-file mode.
 - There is no build step or package manager dependency.
 - The page is intended to run directly on GitHub Pages.

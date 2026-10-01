@@ -4,20 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Julien Regnault | PoC Portfolio and Prototype Projects</title>
-  <meta name="description" content="Portfolio of proof-of-concept and prototype projects by Julien Regnault, including CTRM tools, blockchain demos, fraud intelligence, emergency dashboards, AI trackers, and developer utilities." />
+  <meta name="description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly." />
   <meta name="author" content="Julien Regnault" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a0f1f" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   <link rel="canonical" href="https://philipid3s.github.io/" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Julien Regnault PoC Portfolio" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Julien Regnault | PoC Portfolio and Prototype Projects" />
-  <meta property="og:description" content="Portfolio of proof-of-concept and prototype projects, including CTRM tools, blockchain demos, fraud intelligence, emergency dashboards, AI trackers, and developer utilities." />
+  <meta property="og:description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly." />
   <meta property="og:url" content="https://philipid3s.github.io/" />
-  <meta name="twitter:card" content="summary" />
+  <meta property="og:image" content="https://philipid3s.github.io/og-image.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Julien Regnault — Prototype Launchpad: trading, live data, developer tools and creative projects" />
+  <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Julien Regnault | PoC Portfolio and Prototype Projects" />
-  <meta name="twitter:description" content="Portfolio of proof-of-concept and prototype projects, including CTRM tools, blockchain demos, fraud intelligence, emergency dashboards, AI trackers, and developer utilities." />
+  <meta name="twitter:description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly." />
+  <meta name="twitter:image" content="https://philipid3s.github.io/og-image.png" />
+  <meta name="twitter:image:alt" content="Julien Regnault — Prototype Launchpad: trading, live data, developer tools and creative projects" />
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -30,6 +38,16 @@
           "sameAs": [
             "https://github.com/Philipid3s",
             "https://www.linkedin.com/in/julien-regnault/"
+          ],
+          "description": "Builder of proof-of-concepts and prototypes across commodity trading, blockchain, live data and developer tooling.",
+          "knowsAbout": [
+            "Commodity trading and risk management (CTRM)",
+            "Blockchain and smart contracts",
+            "WebAssembly",
+            "Real-time data dashboards",
+            "Full-stack web development",
+            "Python",
+            "JavaScript"
           ]
         },
         {
@@ -37,10 +55,11 @@
           "@id": "https://philipid3s.github.io/#website",
           "name": "Julien Regnault PoC Portfolio",
           "url": "https://philipid3s.github.io/",
-          "description": "Portfolio of proof-of-concept and prototype projects by Julien Regnault.",
+          "description": "Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly.",
           "author": {
             "@id": "https://philipid3s.github.io/#person"
-          }
+          },
+          "image": "https://philipid3s.github.io/og-image.png"
         },
         {
           "@type": "ItemList",
@@ -241,9 +260,20 @@
     }
 
     .hero p {
-      margin: 0;
+      margin: 0 auto;
+      max-width: 640px;
       color: var(--muted);
       font-size: clamp(1rem, 2vw, 1.15rem);
+      line-height: 1.5;
+    }
+
+    .hero .eyebrow {
+      margin-bottom: 8px;
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
     .group + .group {
@@ -414,8 +444,9 @@
 <body>
   <main class="wrap">
     <section class="hero">
-      <h1>Prototype Launchpad</h1>
-      <p>Quick access to my proof-of-concepts and experimental builds.</p>
+      <p class="eyebrow">Prototype Launchpad</p>
+      <h1>Julien Regnault</h1>
+      <p>Proof-of-concepts and experimental builds, from commodity trading tools and blockchain demos to live data dashboards and developer utilities.</p>
     </section>
 
     <section class="group" aria-labelledby="group-trading">
