@@ -206,7 +206,7 @@
                 "@type": "SoftwareApplication",
                 "name": "Poolrooms",
                 "applicationCategory": "GameApplication",
-                "url": "https://github.com/Philipid3s/poolrooms-webgpu",
+                "url": "http://72.62.254.69:8040/",
                 "codeRepository": "https://github.com/Philipid3s/poolrooms-webgpu"
               }
             },
@@ -389,14 +389,6 @@
       background: transparent;
       color: var(--text);
       border-color: rgba(255, 255, 255, 0.3);
-    }
-
-    .btn.soon {
-      background: transparent;
-      color: var(--muted);
-      border-color: rgba(255, 255, 255, 0.18);
-      cursor: default;
-      pointer-events: none;
     }
 
     footer {
@@ -588,9 +580,9 @@
         </article>
         <article class="card">
           <h3>Poolrooms</h3>
-          <p class="meta">First-person poolrooms scene — seeded tiled rooms and shallow indoor pools you can wade into, with WebGPU compute-shader water (WebGL fallback), procedural spatial audio, and a hostile presence that hunts the player.</p>
+          <p class="meta">First-person poolrooms scene — seeded tiled rooms and shallow indoor pools you can wade into, with WebGPU compute-shader water (WebGL fallback), procedural spatial audio, and a hostile presence that hunts the player. Over plain HTTP the live demo runs on the WebGL fallback; WebGPU needs a secure context (HTTPS).</p>
           <div class="actions">
-            <span class="btn soon" aria-disabled="true">Coming soon</span>
+            <a class="btn live" href="http://72.62.254.69:8040/" target="_blank" rel="noopener noreferrer" aria-label="Open Poolrooms demo">Open Demo</a>
             <a class="btn repo" href="https://github.com/Philipid3s/poolrooms-webgpu" target="_blank" rel="noopener noreferrer" aria-label="View Poolrooms on GitHub">View GitHub</a>
           </div>
         </article>
