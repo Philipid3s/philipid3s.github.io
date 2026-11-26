@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Julien Regnault | PoC Portfolio and Prototype Projects</title>
-  <meta name="description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly." />
+  <meta name="description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities, a CHIP-8 emulator in WebAssembly and a WebGPU poolrooms scene." />
   <meta name="author" content="Julien Regnault" />
   <meta name="robots" content="index, follow" />
   <meta name="theme-color" content="#0a0f1f" />
@@ -15,7 +15,7 @@
   <meta property="og:site_name" content="Julien Regnault PoC Portfolio" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="Julien Regnault | PoC Portfolio and Prototype Projects" />
-  <meta property="og:description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly." />
+  <meta property="og:description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities, a CHIP-8 emulator in WebAssembly and a WebGPU poolrooms scene." />
   <meta property="og:url" content="https://philipid3s.github.io/" />
   <meta property="og:image" content="https://philipid3s.github.io/og-image.png" />
   <meta property="og:image:width" content="1200" />
@@ -23,7 +23,7 @@
   <meta property="og:image:alt" content="Julien Regnault — Prototype Launchpad: trading, live data, developer tools and creative projects" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Julien Regnault | PoC Portfolio and Prototype Projects" />
-  <meta name="twitter:description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly." />
+  <meta name="twitter:description" content="Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities, a CHIP-8 emulator in WebAssembly and a WebGPU poolrooms scene." />
   <meta name="twitter:image" content="https://philipid3s.github.io/og-image.png" />
   <meta name="twitter:image:alt" content="Julien Regnault — Prototype Launchpad: trading, live data, developer tools and creative projects" />
   <script type="application/ld+json">
@@ -56,7 +56,7 @@
           "@id": "https://philipid3s.github.io/#website",
           "name": "Julien Regnault PoC Portfolio",
           "url": "https://philipid3s.github.io/",
-          "description": "Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities and a CHIP-8 emulator in WebAssembly.",
+          "description": "Prototypes by Julien Regnault: commodity trading and blockchain tools, live data dashboards, developer utilities, a CHIP-8 emulator in WebAssembly and a WebGPU poolrooms scene.",
           "author": {
             "@id": "https://philipid3s.github.io/#person"
           },
@@ -202,6 +202,17 @@
             {
               "@type": "ListItem",
               "position": 13,
+              "item": {
+                "@type": "SoftwareApplication",
+                "name": "Poolrooms",
+                "applicationCategory": "GameApplication",
+                "url": "https://github.com/Philipid3s/poolrooms-webgpu",
+                "codeRepository": "https://github.com/Philipid3s/poolrooms-webgpu"
+              }
+            },
+            {
+              "@type": "ListItem",
+              "position": 14,
               "item": {
                 "@type": "WebApplication",
                 "name": "Musée Imaginaire",
@@ -378,6 +389,14 @@
       background: transparent;
       color: var(--text);
       border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .btn.soon {
+      background: transparent;
+      color: var(--muted);
+      border-color: rgba(255, 255, 255, 0.18);
+      cursor: default;
+      pointer-events: none;
     }
 
     footer {
@@ -565,6 +584,14 @@
           <div class="actions">
             <a class="btn live" href="https://philipid3s.github.io/chip8-wasm/" target="_blank" rel="noopener noreferrer" aria-label="Open CHIP-8 Emulator demo">Open Demo</a>
             <a class="btn repo" href="https://github.com/Philipid3s/chip8-wasm" target="_blank" rel="noopener noreferrer" aria-label="View CHIP-8 Emulator on GitHub">View GitHub</a>
+          </div>
+        </article>
+        <article class="card">
+          <h3>Poolrooms</h3>
+          <p class="meta">First-person poolrooms scene — seeded tiled rooms and shallow indoor pools you can wade into, with WebGPU compute-shader water (WebGL fallback), procedural spatial audio, and a hostile presence that hunts the player.</p>
+          <div class="actions">
+            <span class="btn soon" aria-disabled="true">Coming soon</span>
+            <a class="btn repo" href="https://github.com/Philipid3s/poolrooms-webgpu" target="_blank" rel="noopener noreferrer" aria-label="View Poolrooms on GitHub">View GitHub</a>
           </div>
         </article>
         <article class="card">
